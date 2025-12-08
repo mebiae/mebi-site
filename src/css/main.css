@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+article {
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+section {
+    display: flex;
+    gap: 0.5rem;
+
+    article {
+        flex: 1;
+        max-width: 100%;
+    }
+}
