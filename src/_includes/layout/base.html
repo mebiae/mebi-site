@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>cool</title>
+        {% if title %}
+            <title>{{title}}</title>
+        {% else %}
+            <title>Default</title>
+        {% endif %}
 
         <link rel="stylesheet" href="/css/main.css">
 
@@ -20,8 +24,10 @@
             <a href="/test">ssenlooc</a>
             <a href="/">sendcool</a>
         </nav>
-        <main>
-            {{ content | safe }}
-        </main>
+        <div id="box">
+            <main>
+                {{ content | safe }}
+            </main>
+        </div>
     </body>
 </html>
