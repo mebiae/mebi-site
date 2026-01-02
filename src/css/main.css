@@ -28,13 +28,14 @@ nav {
     }
 }
 
-article {
+article,
+footer {
     padding: 10px;
 }
 
 article {
     border: 2px black solid;
-    background: #fff;
+    background-color: #fff;
 }
 
 section {
@@ -44,6 +45,11 @@ section {
     article {
         flex: 1;
     }
+}
+
+footer {
+    border: 2px black solid;
+    background-color: #fff;
 }
 
 #box {
