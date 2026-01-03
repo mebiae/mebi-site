@@ -1,9 +1,17 @@
+@font-face {
+    font-family: "ANHR";
+    src: url(/assets/fonts/AtkinsonHyperlegibleNext-Regular.otf) format("opentype");
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    background: #171c26;
+    color: #fff;
     margin: 0;
+    font-family: "ANHR";
 }
 
 main {
@@ -18,24 +26,21 @@ nav {
     top: 0;
     position: sticky;
     padding: 8px;
-    border-bottom: 2px black solid;
-    background-color: #fff;
+    background: #171c26;
+    border-bottom: 1px #fff solid;
     display: flex;
     gap: 4px;
     
-    @media (width >= 1450px) {
+    @media (width >= 1000px) {
         justify-content: center;
     }
 }
 
 article,
 footer {
+    border: 1px #fff solid;
+    background: #171c26;
     padding: 10px;
-}
-
-article {
-    border: 2px black solid;
-    background-color: #fff;
 }
 
 section {
@@ -45,11 +50,6 @@ section {
     article {
         flex: 1;
     }
-}
-
-footer {
-    border: 2px black solid;
-    background-color: #fff;
 }
 
 #box {
