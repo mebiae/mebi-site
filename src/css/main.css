@@ -3,20 +3,26 @@
     src: url(/assets/fonts/AtkinsonHyperlegibleNext-Regular.otf) format("opentype");
 }
 
+:root {
+    --base-color: #171c26;
+    --border-color: hsl(from var(--base-color) h 25% 50%);
+    --text-color: hsl(from var(--base-color) h 100% 95%);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: #171c26;
-    color: #fff;
+    background: var(--base-color);
+    color: var(--text-color);
     margin: 0;
     font-family: "ANHR";
 }
 
 main {
     display: flex;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     flex-direction: column;
     gap: 0.5rem;
@@ -26,10 +32,11 @@ nav {
     top: 0;
     position: sticky;
     padding: 8px;
-    background: #171c26;
-    border-bottom: 1px #fff solid;
+    background: var(--base-color);
+    border-bottom: 1px var(--border-color) solid;
     display: flex;
     gap: 4px;
+    z-index: 1000;
     
     @media (width >= 1000px) {
         justify-content: center;
@@ -38,8 +45,8 @@ nav {
 
 article,
 footer {
-    border: 1px #fff solid;
-    background: #171c26;
+    border: 1px var(--border-color) solid;
+    backdrop-filter: blur(5px) brightness(120%) saturate(95%);
     padding: 10px;
 }
 
