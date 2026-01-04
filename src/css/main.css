@@ -16,31 +16,35 @@
 body {
     background: var(--base-color);
     color: var(--text-color);
-    margin: 0;
+    display: flex;
+    justify-content: center;
     font-family: "ANHR";
 }
 
 main {
     display: flex;
-    max-width: 900px;
-    margin: 0 auto;
     flex-direction: column;
+    flex: 1;
+    max-width: 700px;
     gap: 0.5rem;
 }
 
-nav {
-    top: 0;
-    position: sticky;
-    padding: 8px;
-    background: var(--base-color);
-    border-bottom: 1px var(--border-color) solid;
-    display: flex;
-    gap: 4px;
-    z-index: 1000;
+aside {
+    width: 150px;
+    margin-right: 0.5rem;
     
-    @media (width >= 1000px) {
-        justify-content: center;
+    article {
+        top: 8px;
+        position: sticky;
     }
+
+    p {
+        margin: 0.3em 0;
+    }
+}
+
+h1, h2 {
+    margin-top: 0.5em;
 }
 
 article,
