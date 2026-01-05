@@ -19,16 +19,21 @@
         {#<meta property="og:image" content="IMAGE">#}
     </head>
     <body>
-        <aside>
-            <article>
-                <h2>barna</h2>
-                <p><a href="/test">link to whatever</a></p>
-                <p><a href="/test">link to whatever</a></p>
-                <p><a href="/test">link to whatever</a></p>
-                <p><a href="/test">link to whatever</a></p>
-                <p><a href="/test">link to whatever</a></p>
-            </article>
-        </aside>
+        {#<aside>
+            <section class="box">
+                <h2>Navigation</h2>
+                <article>
+                    <p><a href="/test">link to whatever</a></p>
+                    <p><a href="/test">link to whatever</a></p>
+                    <p><a href="/test">link to whatever</a></p>
+                    <p><a href="/test">link to whatever</a></p>
+                    <p><a href="/test">link to whatever</a></p>
+                </article>
+                <article>
+                    <p>separate</p>
+                </article>
+            </section>
+        </aside>#}
         <main>
             {{ content | safe }}
         </main>

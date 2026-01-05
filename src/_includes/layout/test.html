@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% if title %}
+            <title>{{title}}</title>
+        {% else %}
+            <title>Default</title>
+        {% endif %}
+
+        <link rel="stylesheet" href="/css/test.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="yy">
+        <meta property="og:site_name" content="yyy">
+        <meta property="og:description" content="teset">
+        <meta property="og:url" content="https://afellowu.neocities.org/">
+        {#<meta property="og:image" content="IMAGE">#}
+    </head>
+    <body>
+        <aside>
+            <article>
+                <h2>{{page.filePathStem}}</h2>
+                <a href="/">/index</a>
+                <a href="/test">/test</a>
+                <a href="/">/index</a>
+            </article>
+        </aside>
+        <main>
+            {{ content | safe }}
+        </main>
+        <aside></aside>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "ANHR";
+    src: url(/assets/fonts/AtkinsonHyperlegibleNext-Regular.otf) format("opentype");
+}
+
+:root {
+    --base-color: #191c23;
+    --border-color: hsl(from var(--base-color) h 20% 35%);
+    --text-color: hsl(from var(--base-color) h 110% 95%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    font-family: ANHR;
+    gap: 0.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 620px;
+    gap: 0.5rem;
+}
+
+article,
+footer {
+    border: 1px var(--border-color) solid;
+    backdrop-filter: blur(5px) brightness(150%) saturate(110%);
+    padding: 8px;
+
+    h1, h2, h3 {
+        border-bottom: 1px var(--border-color) solid;
+    }
+}
+
+h1, h2, h3 {
+    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+}
+
+p {
+    margin: 0.7em 0;
+    line-height: 1.5em;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: hsl(from var(--text-color) h 1000% l);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+aside {
+    width: 160px;
+
+    a {
+        display: block;
+        margin: 0.2em 0;
+    }
+}
