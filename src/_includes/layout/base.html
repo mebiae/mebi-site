@@ -19,23 +19,36 @@
         {#<meta property="og:image" content="IMAGE">#}
     </head>
     <body>
-        {#<aside>
-            <section class="box">
+        <header>
+            <details>
+                <summary>Navigation</summary>
+                <nav>
                 <h2>Navigation</h2>
-                <article>
-                    <p><a href="/test">link to whatever</a></p>
-                    <p><a href="/test">link to whatever</a></p>
-                    <p><a href="/test">link to whatever</a></p>
-                    <p><a href="/test">link to whatever</a></p>
-                    <p><a href="/test">link to whatever</a></p>
-                </article>
-                <article>
-                    <p>separate</p>
-                </article>
-            </section>
-        </aside>#}
-        <main>
-            {{ content | safe }}
-        </main>
+                <a href="/">Home</a>
+                <a href="/">About</a>
+                <a href="/">Blog</a>
+                <a href="/">Updates</a>
+                <a href="/">Projects</a>
+                <a href="/">Links</a>
+            </nav>
+            </details>
+        </header>
+        <div class="flex">
+            <aside id="left">
+            <nav>
+                <h2>Navigation</h2>
+                <a href="/">Home</a>
+                <a href="/">About</a>
+                <a href="/">Blog</a>
+                <a href="/">Updates</a>
+                <a href="/">Projects</a>
+                <a href="/">Links</a>
+            </nav>
+            </aside>
+            <main>
+                {{ content | safe }}
+            </main>
+            <aside id="right"></aside>
+        </div>
     </body>
 </html>
