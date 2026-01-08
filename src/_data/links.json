@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Home",
+        "dir": "" 
+    },
+    {
+        "name": "About",
+        "dir": "about" 
+    },
+    {
+        "name": "Blog",
+        "dir": "blog" 
+    },
+    {
+        "name": "Updates",
+        "dir": "updates" 
+    },
+    {
+        "name": "Projects",
+        "dir": "projects" 
+    },
+    {
+        "name": "Links",
+        "dir": "links" 
+    }
+]

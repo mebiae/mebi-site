@@ -22,28 +22,13 @@
         <header>
             <details>
                 <summary>Navigation</summary>
-                <nav>
-                <h2>Navigation</h2>
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">Blog</a>
-                <a href="/">Updates</a>
-                <a href="/">Projects</a>
-                <a href="/">Links</a>
-            </nav>
+                {% include "partials/nav.html" %}
+                <div id="overlay"></div>
             </details>
         </header>
         <div class="flex">
             <aside id="left">
-            <nav>
-                <h2>Navigation</h2>
-                <a href="/">Home</a>
-                <a href="/">About</a>
-                <a href="/">Blog</a>
-                <a href="/">Updates</a>
-                <a href="/">Projects</a>
-                <a href="/">Links</a>
-            </nav>
+                {% include "partials/nav.html" %}
             </aside>
             <main>
                 {{ content | safe }}

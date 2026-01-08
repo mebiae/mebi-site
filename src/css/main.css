@@ -6,6 +6,7 @@
 :root {
     --base-color: #191c23;
     --border-color: hsl(from var(--base-color) h 20% 35%);
+    --box-color: hsl(from var(--border-color) h s 18%);
     --text-color: hsl(from var(--base-color) h 110% 95%);
 }
 
@@ -32,7 +33,7 @@ article,
 footer,
 nav {
     border: 1px var(--border-color) solid;
-    backdrop-filter: blur(5px) brightness(150%) saturate(110%);
+    background: var(--box-color);
     padding: 8px;
 
     h1, h2, h3 {
@@ -41,10 +42,14 @@ nav {
 }
 
 nav {
+    position: sticky;
+    top: 8px;
+
     details & {
+        border-top: 0;
         width: 160px;
         position: absolute;
-        top: 43px;
+        top: 44px;
         left: 0;
     }
 
@@ -56,11 +61,12 @@ nav {
 
 header {
     border-bottom: 1px var(--border-color) solid;
-    backdrop-filter: blur(5px) brightness(150%) saturate(110%);
+    background: var(--box-color);
     padding: 8px;
     display: none;
     position: sticky;
-    z-index: 1000;
+    top: 0;
+    z-index: 1;
 
     summary::marker {
         content: '☰ ';
@@ -82,9 +88,14 @@ p {
 }
 
 a,
-summary {
+header summary {
     text-decoration: none;
-    color: hsl(from var(--text-color) calc(h - 50) 1000% l);
+    color: hsl(from var(--text-color) calc(h - 70) 1000% l);
+
+    &[selected] {
+        text-decoration: underline;
+        color: hsl(from var(--text-color) calc(h - 80) 1000% l);
+    }
 
     &:hover {
         text-decoration: underline;
@@ -108,6 +119,16 @@ section {
     @media (width <= 990px) {
         display: none;
     }
+}
+
+#overlay {
+    backdrop-filter: blur(5px) brightness(150%) saturate(110%);
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 .flex {

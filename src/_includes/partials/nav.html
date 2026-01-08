@@ -1,0 +1,11 @@
+<nav>
+    <h2>Navigation</h2>
+
+    {% for link in links %}
+        {% if page.fileSlug == link.dir %}
+            <a href="/{{link.dir}}" selected>{{link.name}}</a>
+        {% else %}
+            <a href="/{{link.dir}}">{{link.name}}</a>
+        {% endif %}
+    {% endfor %}
+</nav>
