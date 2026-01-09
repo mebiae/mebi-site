@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "ANHR";
+    font-family: "AHN-Regular";
     src: url(/assets/fonts/AtkinsonHyperlegibleNext-Regular.otf) format("opentype");
 }
 
@@ -17,7 +17,7 @@
 body {
     background: var(--base-color);
     color: var(--text-color);
-    font-family: ANHR;
+    font-family: "AHN-Regular";
     margin: 0;
 }
 
@@ -93,7 +93,7 @@ header summary {
     color: hsl(from var(--text-color) calc(h - 70) 1000% l);
 
     &[selected] {
-        text-decoration: underline;
+        font-weight: bolder;
         color: hsl(from var(--text-color) calc(h - 80) 1000% l);
     }
 
@@ -104,6 +104,14 @@ header summary {
 
 aside {
     width: 160px;
+
+    nav, article {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
 }
 
 section {
