@@ -19,21 +19,6 @@
         {#<meta property="og:image" content="IMAGE">#}
     </head>
     <body>
-        <header>
-            <details>
-                <summary>Navigation</summary>
-                {% include "partials/nav.html" %}
-                <div id="overlay"></div>
-            </details>
-        </header>
-        <div class="flex">
-            <aside id="left">
-                {% include "partials/nav.html" %}
-            </aside>
-            <main>
-                {{ content | safe }}
-            </main>
-            <aside id="right"></aside>
-        </div>
+        {{ content | safe }}
     </body>
 </html>
