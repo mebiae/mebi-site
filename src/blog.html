@@ -1,0 +1,24 @@
+---
+layout: layout/main
+css: [main, blog]
+---
+
+<article>
+    <h1>blog</h1>
+
+    {% if collections.blogs %}
+        {% for blog in collections.blogs %}
+            <a href="{{ blog.filePathStem }}" class="blog">
+                <article>
+                    <h2>{{ blog.data.title }}</h2>
+                    <p>{{ blog.data.subtitle }}</p>
+                    <small>Posted on: {{ blog.date | UTC }}</small>
+                </article>
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>No blog posts here... for whatever reason.</p>
+    {% endif %}
+</article>
+
+{% include "partials/footer.html" %}

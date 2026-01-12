@@ -2,12 +2,18 @@
 <html lang="en">
     <head>
         {% if title %}
-            <title>{{title}}</title>
+            <title>{{ title }}</title>
         {% else %}
             <title>Default</title>
         {% endif %}
 
-        <link rel="stylesheet" href="/css/main.css">
+        {% if css %}
+            {% for style in css %}
+                <link rel="stylesheet" href="/css/{{style}}.css">
+            {% endfor %}
+        {% else %}
+            <link rel="stylesheet" href="/css/main.css">
+        {% endif %}
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

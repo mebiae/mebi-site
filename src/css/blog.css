@@ -1,0 +1,13 @@
+.blog {
+    text-decoration: none !important;
+    color: var(--text-color);
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        border-bottom: 1px var(--border-color) solid;
+        margin-bottom: 0.7em;
+    }
+}
