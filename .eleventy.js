@@ -1,4 +1,5 @@
-﻿module.exports = function(eleventyConfig) {
+﻿module.exports = async function(eleventyConfig) {
+    const { IdAttributePlugin } = await import("@11ty/eleventy");
 
     // De-index.html the output
     eleventyConfig.addGlobalData("permalink", () => {
@@ -15,6 +16,23 @@
       return new Date(val).toLocaleDateString("en-CA", {
         timeZone: "UTC"
       });
+    });
+
+    // Plugins
+
+    eleventyConfig.addPlugin(IdAttributePlugin, {
+
+		decodeEntities: true,
+		checkDuplicates: "error",
+		slugify: eleventyConfig.getFilter("slugify"),
+
+      filter: function({ page }) {
+        if(page.inputPath.endsWith(".md")) {
+          return true;
+        }
+
+        return false;
+      }
     });
 
     return {

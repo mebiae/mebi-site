@@ -1,0 +1,17 @@
+<nav>
+    <h2>Navigation</h2>
+
+    <a href="/">Home</a>
+    <a href="/blog" selected>Blog</a>
+    <ul>
+        {% if collections.blogs %}
+            {% for table in collections.blogs %}
+                {% if page.url == table.url %}
+                    {% for content in table.data.toc %}
+                        <a href="#{{ content  | lower | slugify }}">{{ content }}</a>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </ul>
+</nav>

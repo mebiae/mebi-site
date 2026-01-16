@@ -1,0 +1,19 @@
+---
+layout: layout/flex
+---
+
+<style>
+    ul {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+</style>
+
+<aside id="left">
+    {% include "partials/blog-nav.html" %}
+</aside>
+<main>
+    {{ content | safe }}
+</main>
+<aside id="right"></aside>
