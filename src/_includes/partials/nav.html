@@ -3,9 +3,9 @@
 
     {% for link in links %}
         {% if page.fileSlug == link.dir %}
-            <a href="/{{link.dir}}" selected>{{link.name}}</a>
+            <a href="/{{link.dir}}" aria-current="page">{{link.name}}</a>
         {% else %}
-            <a href="/{{link.dir}}">{{link.name}}</a>
+            <a href="/{{link.dir}}" aria-current="false">{{link.name}}</a>
         {% endif %}
     {% endfor %}
 </nav>

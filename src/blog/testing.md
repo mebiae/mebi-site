@@ -4,7 +4,7 @@ subtitle: test
 date: 1969-12-31
 tags:
     - testing
-toc:
+contents:
     - Title
     - Section One
 ---

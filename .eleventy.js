@@ -22,9 +22,9 @@
 
     eleventyConfig.addPlugin(IdAttributePlugin, {
 
-		decodeEntities: true,
-		checkDuplicates: "error",
-		slugify: eleventyConfig.getFilter("slugify"),
+      decodeEntities: true,
+      checkDuplicates: "error",
+      slugify: eleventyConfig.getFilter("slugify"),
 
       filter: function({ page }) {
         if(page.inputPath.endsWith(".md")) {

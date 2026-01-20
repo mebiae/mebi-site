@@ -92,7 +92,7 @@ header summary {
     text-decoration: none;
     color: hsl(from var(--text-color) calc(h - 70) 1000% l);
 
-    &[selected] {
+    &[aria-current=page] {
         font-weight: bolder;
         color: hsl(from var(--text-color) calc(h - 80) 1000% l);
     }

@@ -1,13 +1,13 @@
 <nav>
-    <h2>Navigation</h2>
+    <h2>Table of Contents</h2>
 
     <a href="/">Home</a>
-    <a href="/blog" selected>Blog</a>
+    <a href="/blog" aria-current="page">Blog</a>
     <ul>
         {% if collections.blogs %}
             {% for table in collections.blogs %}
                 {% if page.url == table.url %}
-                    {% for content in table.data.toc %}
+                    {% for content in table.data.contents %}
                         <a href="#{{ content  | lower | slugify }}">{{ content }}</a>
                     {% endfor %}
                 {% endif %}

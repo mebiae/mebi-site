@@ -1,6 +1,10 @@
 .blog {
     text-decoration: none !important;
     color: var(--text-color);
+
+    &:last-child article {
+        margin-bottom: 0;
+    }
     
     article {
         margin-bottom: 0.5rem;
